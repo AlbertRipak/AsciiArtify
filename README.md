@@ -28,7 +28,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 ```bash
 minikube start
 ```
-![Image](./doc/container.jpg)
+![Image](./.data/container.jpg)
 Kind:
 
 Встановіть Docker, якщо він відсутній: 
@@ -46,7 +46,7 @@ kind create cluster
 
 k3d:
 Встановлення під Windows 10 Pro (перед інсталяцією потрібно встановити Docker Desktop)
-![Image](./doc/install-k3d.gif)
+![Image](./.data/install-k3d.gif)
 
 Встановіть Docker, якщо він відсутній: 
 ```bash
