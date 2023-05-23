@@ -46,7 +46,7 @@ kind create cluster
 
 k3d:
 Встановлення під Windows 10 Pro (перед інсталяцією потрібно встановити Docker Desktop)
-![Image](./.data/install-k3d.gif)
+![Image](./doc/.data/install-k3d.gif)
 
 Встановіть Docker, якщо він відсутній: 
 ```bash
