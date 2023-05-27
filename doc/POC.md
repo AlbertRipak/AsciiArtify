@@ -5,8 +5,8 @@
 
 # Create cluster
 ```bash
-PS > k3d cluster create demo
-PS > k3d cluster list
+k3d cluster create demo
+k3d cluster list
 ```
 
 | NAME | SERVERS | AGENTS | LOADBALANCER |
@@ -14,13 +14,13 @@ PS > k3d cluster list
 | demo | 1/1     | 0/0    | true         |
 # Install ArgoCD
 ```bash
-PS > kubectl create namespace argocd
-PS > kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 # Connect to ArgoCD
 ```bash
-PS > kubectl port-forward -n argocd svc/argocd-server 8080:443
-PS > kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+kubectl port-forward -n argocd svc/argocd-server 8080:443
+kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
 # Change the password from the yaml file to your password
-PS > echo TkR4NUM5eEk0UWpOTUFGVw== | base64 -d
+echo TkR4NUM5eEk0UWpOTUFGVw== | base64 -d
 ```
