@@ -1,0 +1,19 @@
+apiVersion: demo/v1
+kind: Deployment
+metadata: 
+  name: demo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: demo
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo
+        image: argoproj/argocd:v2.5.17
+        ports:
+        - containerPort: 8080
