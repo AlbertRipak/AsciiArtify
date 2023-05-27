@@ -3,6 +3,8 @@
 Для того щоб розгорнути в локальному середовищі Argo CD, будемо використовувати k3d.
 Інструкцію для налаштування k3d можна отримати в файлі <a href="https://github.com/AlbertRipak/AsciiArtify.git">README.md</a>.
 
+![Image](./.data/argoCD.gif)
+
 # Create cluster
 ```bash
 k3d cluster create demo
@@ -20,6 +22,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 # Connect to ArgoCD
 ```bash
 kubectl port-forward -n argocd svc/argocd-server 8080:443
+
+
 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
 # Change the password from the yaml file to your password
 echo TkR4NUM5eEk0UWpOTUFGVw== | base64 -d
